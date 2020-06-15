@@ -34,9 +34,6 @@ model.add(layers.Dense(128, activation = 'relu'))
 model.add(layers.Dense(64, activation = 'relu'))
 model.add(layers.Dense(10, activation = 'softmax'))
 
-# как говорит документация, adam эффективен в вычислительном отношении
-# для задач, которые являются большими с точки зрения данных/параметров
-# rmsprop, кстати, выдал всего 40% точности
 model.compile(optimizer = 'adam', 
               loss = 'categorical_crossentropy',
               metrics = ['acc'])
